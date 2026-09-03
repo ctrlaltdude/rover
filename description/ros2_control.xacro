@@ -33,6 +33,7 @@
             <plugin name="gz_ros2_control::GazeboSimROS2ControlPlugin" filename="libgz_ros2_control-system.so">
                 <!-- Make sure to put your package name in there!! -->
                 <parameters>$(find rover)/config/my_controllers.yaml</parameters>
+                <parameters>$(find rover)/config/gaz_ros2_ctl_use_sim.yaml</parameters>
             </plugin>
         </gazebo>
 
