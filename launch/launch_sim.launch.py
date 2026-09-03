@@ -25,9 +25,26 @@ def generate_launch_description():
     rsp = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
-                )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': use_ros2_control}.items()
+                #)]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': use_ros2_control}.items()
+                )]), launch_arguments={'use_sim_time': 'true', 'use_ros2_control': 'true'}.items()
     )
-    
+
+    joystick = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','joystick.launch.py'
+                )]), launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+    twist_mux_config = os.path.join(get_package_share_directory(package_name),
+                                         'config', 'twist_mux.yaml')
+    twist_mux = Node(
+        package='twist_mux',
+        executable='twist_mux',
+        output='screen',
+        remappings={('/cmd_vel_out', '/cmd_vel')},
+        parameters=[
+            {'use_sim_time': True}, twist_mux_config])
+
     world = LaunchConfiguration('world')
 
     world_arg = DeclareLaunchArgument(
@@ -98,4 +115,6 @@ def generate_launch_description():
         ros_gz_image_bridge,
         diff_drive_spawner,
         joint_broad_spawner,
+        twist_mux,
+        joystick,
     ])
