@@ -19,6 +19,7 @@ def generate_launch_description():
             parameters=[{
                 'video_device': LaunchConfiguration('video_device'),
                 'frame_id': 'camera_link_optical',
+                #'time_per_frame': [1, 6],
                 'image_width': 640,
                 'image_height': 480
             }]
