@@ -123,12 +123,27 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
       <name>barrel_2</name>
-      <pose>2.5 3 -0 0 -0 -0</pose>
+      <pose>2.5 1.99006 -0 -0 -0 0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Jersey Barrier</uri>
       <name>barrel_3</name>
       <pose>3.5 4 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
+      <name>barrel_2_1</name>
+      <pose>4.71928 1.45552 -0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
+      <name>barrel_2_2</name>
+      <pose>4.31959 -0.605741 -0 0 -0 -0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
+      <name>barrel_2_3</name>
+      <pose>3.14523 -2.17899 -0 0 -0 -0</pose>
     </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
