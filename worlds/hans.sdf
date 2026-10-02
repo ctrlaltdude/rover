@@ -123,7 +123,7 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
       <name>barrel_2</name>
-      <pose>2.5 1.99006 -0 -0 -0 0</pose>
+      <pose>2.5 1.99006 -0 -0 0 -0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Jersey Barrier</uri>
@@ -133,7 +133,7 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
       <name>barrel_2_1</name>
-      <pose>4.71928 1.45552 -0 0 0 0</pose>
+      <pose>4.71928 1.45552 -0 0 -0 -0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
@@ -145,6 +145,53 @@
       <name>barrel_2_3</name>
       <pose>3.14523 -2.17899 -0 0 -0 -0</pose>
     </include>
+    <model name='sphere'>
+      <pose>0.90694 -0.024774 0.033 0 -0 0</pose>
+      <link name='sphere_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.10000000000000001</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.10000000000000001</iyy>
+            <iyz>0</iyz>
+            <izz>0.10000000000000001</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='sphere_collision'>
+          <geometry>
+            <sphere>
+              <radius>0.033</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='sphere_visual'>
+          <geometry>
+            <sphere>
+              <radius>0.033</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0.1 0.1 0.8 1</ambient> <!-- Blue color -->
+            <diffuse>1 1 0 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 -0 0</pose>
       <cast_shadows>true</cast_shadows>

@@ -7,7 +7,7 @@ detect_ball:
     y_max: 100
     h_min: 20
     h_max: 37
-    s_min: 42
+    s_min: 16
     s_max: 255
     v_min: 0
     v_max: 255
