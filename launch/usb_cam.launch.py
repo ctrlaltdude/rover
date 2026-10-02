@@ -23,7 +23,7 @@ def generate_launch_description():
                 'image_width': 640,
                 'image_height': 480,
                 'auto_exposure': 0,
-                'brightness': 100,
+                'brightness': 50,
                 'exposure_time_absolute': 6000
             }]
         )
