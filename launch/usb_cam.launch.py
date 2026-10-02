@@ -22,8 +22,9 @@ def generate_launch_description():
                 'time_per_frame': [1, 6],
                 'image_width': 640,
                 'image_height': 480,
-                'auto_exposure': 1,
-                'exposure_time_absolute': 600
+                'auto_exposure': 0,
+                'brightness': 100,
+                'exposure_time_absolute': 6000
             }]
         )
     ])
